@@ -62,7 +62,7 @@ class PanelService : Service() {
     private fun dp(v: Float): Int = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, v, resources.displayMetrics).toInt()
 
     private fun startForegroundCompat() {
-        val nm = getSystemService(NotificationManager::class.java)
+        val nm = getSystemService(NotificationManager::class.java) ?: return
         nm.createNotificationChannel(NotificationChannel(CHANNEL, getString(R.string.gy_panel_channel), NotificationManager.IMPORTANCE_MIN))
         val open = PendingIntent.getActivity(this, 0, GuangyingEntry.openPanelSettingsIntent(this), PendingIntent.FLAG_IMMUTABLE)
         val n = Notification.Builder(this, CHANNEL)
