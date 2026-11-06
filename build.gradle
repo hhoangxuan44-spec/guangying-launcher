@@ -157,7 +157,7 @@ android {
     defaultConfig {
         // Lawnchair Launcher 15.0 Beta 3
         // See CONTRIBUTING.md#versioning-scheme
-        versionCode 15_00_02_03_00
+        versionCode (System.getenv("GITHUB_RUN_NUMBER") ? System.getenv("GITHUB_RUN_NUMBER").toInteger() : 15_00_02_03_00)
         versionName "${versionDisplayName}"
         buildConfigField "String", "VERSION_DISPLAY_NAME", "\"${versionDisplayName}\""
         buildConfigField "String", "MAJOR_VERSION", "\"${majorVersion}\""
@@ -173,7 +173,7 @@ android {
     applicationVariants.configureEach { variant ->
         variant.outputs.configureEach {
             def channel = variant.productFlavors.last().name
-            outputFileName = "Lawnchair.${variant.versionName}.$channel.${variant.buildType.name}.apk"
+            outputFileName = "GuangyingLauncher.${variant.versionName}.$channel.${variant.buildType.name}.apk"
         }
     }
 
@@ -244,11 +244,11 @@ android {
 
         debug {
             applicationIdSuffix ".debug"
-            resValue("string", "derived_app_name", "Lawnchair (Debug)")
+            resValue("string", "derived_app_name", "光影桌面（调试）")
         }
 
         release {
-            resValue("string", "derived_app_name", "Lawnchair")
+            resValue("string", "derived_app_name", "光影桌面")
             minifyEnabled true
             shrinkResources true
             proguardFiles proguardFilesFromAosp + "proguard.pro"
@@ -278,17 +278,17 @@ android {
         }
 
         github {
-            applicationId 'app.lawnchair'
+            applicationId 'io.github.guangying.launcher'
             dimension "channel"
         }
 
         nightly {
-            applicationId 'app.lawnchair.nightly'
+            applicationId 'io.github.guangying.launcher.nightly'
             dimension "channel"
         }
 
         play {
-            applicationId "app.lawnchair.play"
+            applicationId "io.github.guangying.launcher.play"
             dimension "channel"
             isDefault true
         }

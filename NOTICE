@@ -1,0 +1,7 @@
+光影桌面 (guangying-launcher)
+
+本项目是 LawnchairLauncher/Lawnchair（https://github.com/LawnchairLauncher/Lawnchair，15-beta 分支，
+上游提交 505dbc4）的个人定制版本，按 GPL-3.0 发布，许可证见 LICENSE.txt。
+Lawnchair 及其所含 Launcher3、Google/AOSP 代码的版权归各自作者所有，原有版权声明全部保留。
+
+本仓库新增的部分放在独立的包 app.lawnchair.guangying 下，其余文件尽量不改动，便于合并上游更新。

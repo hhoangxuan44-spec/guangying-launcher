@@ -1,0 +1,51 @@
+name: 构建光影桌面
+
+# 每次推送到 main 都构建 release APK（固定签名，能覆盖安装），发布到 Releases 的「latest」，并生成 version.json
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: actions/setup-java@v4
+        with:
+          distribution: zulu
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v4
+      - name: 构建 release APK
+        run: ./gradlew assembleLawnWithQuickstepGithubRelease --no-daemon --stacktrace
+      - name: 整理产物
+        run: |
+          mkdir -p out
+          cp build/outputs/apk/lawnWithQuickstepGithub/release/*.apk out/launcher.apk
+          echo '{"versionCode":${{ github.run_number }},"apk":"launcher.apk"}' > out/version.json
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: launcher-apk
+          path: out/*
+      - name: 发布到 Releases（latest）
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --yes --cleanup-tag || true
+          gh release create latest out/launcher.apk out/version.json \
+            --title "光影桌面 第 ${{ github.run_number }} 版" \
+            --notes "提交 ${{ github.sha }}。下载 launcher.apk 直接覆盖安装；检查更新读 version.json。" \
+            --target ${{ github.sha }}

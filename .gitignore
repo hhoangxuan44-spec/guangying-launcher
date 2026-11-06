@@ -14,8 +14,9 @@ bin
 local.properties
 build
 .DS_Store
-keystore.properties
+# keystore.properties 与 signing/ 是个人侧载用的固定签名，有意提交（保证新版本能覆盖安装）
 *.jks
+!signing/*.keystore
 __pycache__
 .vscode
 .fleet

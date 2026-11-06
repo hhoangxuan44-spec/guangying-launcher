@@ -1,3 +1,16 @@
+# 光影桌面
+
+基于 [Lawnchair](https://github.com/LawnchairLauncher/Lawnchair)（15-beta）的个人定制桌面，目标设备：酷比魔方掌玩 mini2（Android 14，无 root）。
+在 Lawnchair 之上整合亮度 / 系统「极暗」/ 音量等控制中心功能。GPL-3.0，上游版权声明全部保留，见 [NOTICE](NOTICE)。
+
+- 包名 `io.github.guangying.launcher`，应用名「光影桌面」
+- 下载安装：<https://github.com/hhoangxuan44-spec/guangying-launcher/releases/latest/download/launcher.apk>（每次推送 main 自动构建，固定签名，可直接覆盖安装）
+- 新增代码在 `app.lawnchair.guangying` 包
+
+---
+
+（以下为上游 Lawnchair 的 README）
+
 # Lawnchair 15
 
 [![Build debug APK](https://github.com/LawnchairLauncher/lawnchair/actions/workflows/ci.yml/badge.svg)](https://github.com/LawnchairLauncher/lawnchair/actions/workflows/ci.yml)
