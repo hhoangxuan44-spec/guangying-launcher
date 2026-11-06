@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 光影桌面新增的文字。放在默认资源里并用简体中文书写：所有语言都显示中文（没有逐语言翻译）。 -->
+<resources>
+    <string name="gy_light_title">光控</string>
+    <string name="gy_light_desc">亮度与极暗，一条滑块</string>
+    <string name="gy_light_current">当前亮度</string>
+    <string name="gy_light_info">屏幕亮度 %1$d / 255</string>
+    <string name="gy_light_info_dim">屏幕亮度 %1$d / 255　·　极暗 %2$d / 100</string>
+    <string name="gy_light_need_write">还没有「修改系统设置」权限，不能调亮度。请到权限中心授权。</string>
+    <string name="gy_light_need_secure">极暗（0–300）需要 WRITE_SECURE_SETTINGS 权限，授权前滑块停在 300 以上。到权限中心查看授权命令。</string>
+    <string name="gy_light_presets">预设</string>
+    <string name="gy_light_presets_hint">点一下套用，长按把当前值存为这个预设。</string>
+    <string name="gy_light_preset_saved">已把 %1$d 存为这个预设</string>
+    <string name="gy_preset_day">白天</string>
+    <string name="gy_preset_read">阅读</string>
+    <string name="gy_preset_night">夜间</string>
+    <string name="gy_light_schedule">定时</string>
+    <string name="gy_light_schedule_hint">每天到点自动切到某个预设。重启后会自动重新登记；系统省电策略太严时可能不准，请在设置里把本应用的电池设为「不限制」。</string>
+    <string name="gy_light_schedule_row_hint">点一下改时间，长按改预设</string>
+    <string name="gy_light_schedule_add">添加定时</string>
+    <string name="gy_light_delete">删除</string>
+    <string name="gy_light_more">更多</string>
+    <string name="gy_light_tile_title">快捷设置开关</string>
+    <string name="gy_light_tile_hint">下拉通知栏，在编辑里把「光控」拖进来：点一下在夜间预设和上次的日间值之间切换，长按打开这里。</string>
+    <string name="gy_tile_label">光控</string>
+    <string name="gy_tile_night">夜间</string>
+    <string name="gy_tile_day">日间</string>
+    <string name="gy_tile_need_auth">点按授权</string>
+
+    <string name="gy_perm_center">权限中心</string>
+    <string name="gy_perm_center_sub">各项权限的状态与获取方式</string>
+    <string name="gy_perm_intro">缺少某项权限时，相关功能会变灰并说明原因，不会崩溃。</string>
+    <string name="gy_perm_granted">已授权</string>
+    <string name="gy_perm_missing">未授权</string>
+    <string name="gy_perm_optional">（可选）</string>
+    <string name="gy_perm_copy">复制命令</string>
+    <string name="gy_perm_copied">已复制</string>
+    <string name="gy_perm_no_page">这个系统没有对应的设置页面</string>
+    <string name="gy_perm_restricted">先在应用信息里「允许受限设置」</string>
+    <string name="gy_perm_write_settings">修改系统设置</string>
+    <string name="gy_perm_write_settings_why">调节屏幕亮度。点一下跳转到系统授权页。</string>
+    <string name="gy_perm_secure">修改安全设置（WRITE_SECURE_SETTINGS）</string>
+    <string name="gy_perm_secure_why">极暗、动画速度等。只能用电脑授权一次：平板连电脑、开启 USB 调试，执行下面的命令。</string>
+    <string name="gy_perm_overlay">显示在其他应用上层</string>
+    <string name="gy_perm_overlay_why">侧边控制面板的悬浮把手。点一下跳转到悬浮窗授权页。</string>
+    <string name="gy_perm_notifications">通知</string>
+    <string name="gy_perm_notifications_why">前台服务常驻时需要显示的通知。点一下申请。</string>
+    <string name="gy_perm_accessibility">无障碍服务</string>
+    <string name="gy_perm_accessibility_why">替换音量键弹窗。自己安装的 APK 要先到应用信息 → 右上角菜单 → 允许受限设置，再到无障碍里打开。</string>
+</resources>

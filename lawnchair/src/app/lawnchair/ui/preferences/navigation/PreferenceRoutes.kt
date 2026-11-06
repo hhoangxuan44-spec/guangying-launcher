@@ -62,6 +62,13 @@ data object Smartspace : PreferenceRootRoute
 @Serializable
 data object About : PreferenceRootRoute
 
+// 光影桌面新增
+@Serializable
+data object GuangyingLight : PreferenceRootRoute
+
+@Serializable
+data object GuangyingPermissions : PreferenceRoute
+
 @Serializable
 data object ExperimentalFeatures : PreferenceRootRoute
 

@@ -67,6 +67,7 @@ import app.lawnchair.ui.preferences.navigation.ExperimentalFeatures
 import app.lawnchair.ui.preferences.navigation.Folders
 import app.lawnchair.ui.preferences.navigation.General
 import app.lawnchair.ui.preferences.navigation.Gestures
+import app.lawnchair.ui.preferences.navigation.GuangyingLight
 import app.lawnchair.ui.preferences.navigation.HomeScreen
 import app.lawnchair.ui.preferences.navigation.PreferenceRootRoute
 import app.lawnchair.ui.preferences.navigation.Quickstep
@@ -110,6 +111,14 @@ fun PreferencesDashboard(
         }
 
         PreferenceCategoryGroup {
+            PreferenceCategory(
+                label = stringResource(R.string.gy_light_title),
+                description = stringResource(R.string.gy_light_desc),
+                iconResource = R.drawable.ic_guangying_light,
+                onNavigate = { onNavigate(GuangyingLight) },
+                isSelected = currentRoute is GuangyingLight,
+            )
+
             PreferenceCategory(
                 label = stringResource(R.string.general_label),
                 description = stringResource(R.string.general_description),

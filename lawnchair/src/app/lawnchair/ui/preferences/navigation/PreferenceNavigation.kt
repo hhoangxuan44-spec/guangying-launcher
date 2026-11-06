@@ -133,6 +133,9 @@ fun PreferenceNavigation(
             SearchProviderPreferenceScreen(route.id)
         }
 
+        composable<GuangyingLight> { app.lawnchair.guangying.ui.LightControlPreferences() }
+        composable<GuangyingPermissions> { app.lawnchair.guangying.ui.PermissionCenterPreferences() }
+
         composable<Folders> { FolderPreferences() }
 
         composable<Gestures> { GesturePreferences() }
