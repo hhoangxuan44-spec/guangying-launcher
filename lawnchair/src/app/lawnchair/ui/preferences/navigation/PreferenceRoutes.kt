@@ -67,6 +67,9 @@ data object About : PreferenceRootRoute
 data object GuangyingLight : PreferenceRootRoute
 
 @Serializable
+data object GuangyingPanel : PreferenceRootRoute
+
+@Serializable
 data object GuangyingPermissions : PreferenceRoute
 
 @Serializable

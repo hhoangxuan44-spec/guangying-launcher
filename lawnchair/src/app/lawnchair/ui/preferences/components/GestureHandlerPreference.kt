@@ -42,6 +42,7 @@ val options = listOf(
     GestureHandlerOption.Sleep,
     GestureHandlerOption.Recents,
     GestureHandlerOption.OpenNotifications,
+    GestureHandlerOption.OpenControlPanel,
     GestureHandlerOption.OpenAppDrawer,
     GestureHandlerOption.OpenAppSearch,
     GestureHandlerOption.OpenSearch,

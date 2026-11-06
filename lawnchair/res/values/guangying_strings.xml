@@ -47,4 +47,28 @@
     <string name="gy_perm_notifications_why">前台服务常驻时需要显示的通知。点一下申请。</string>
     <string name="gy_perm_accessibility">无障碍服务</string>
     <string name="gy_perm_accessibility_why">替换音量键弹窗。自己安装的 APK 要先到应用信息 → 右上角菜单 → 允许受限设置，再到无障碍里打开。</string>
+
+    <string name="gy_panel_title">控制面板</string>
+    <string name="gy_panel_desc">从屏幕边缘划出：亮度、极暗、音量</string>
+    <string name="gy_panel_brightness">亮度</string>
+    <string name="gy_panel_volume">音量</string>
+    <string name="gy_panel_dim">极暗</string>
+    <string name="gy_panel_dnd">勿扰</string>
+    <string name="gy_panel_rotate">自动旋转</string>
+    <string name="gy_panel_need_write">需要「修改系统设置」权限才能调亮度和自动旋转。</string>
+    <string name="gy_panel_need_secure">极暗（0–300）需要 WRITE_SECURE_SETTINGS 权限，授权前滑块停在 300 以上。</string>
+    <string name="gy_panel_dim_need">极暗需要 WRITE_SECURE_SETTINGS 权限（用电脑 adb 授权一次，见权限中心）。</string>
+    <string name="gy_panel_dnd_need">需要「勿扰权限」：请在打开的页面里允许光影桌面。</string>
+    <string name="gy_panel_channel">侧边控制面板</string>
+    <string name="gy_panel_running">侧边控制面板运行中</string>
+    <string name="gy_panel_running_hint">从屏幕边缘的细条往里划，打开控制面板</string>
+    <string name="gy_panel_switch">侧边把手</string>
+    <string name="gy_panel_switch_desc">在屏幕边缘放一条细条，从边缘往里划（或点一下）打开控制面板。需要「显示在其他应用上层」权限和一个常驻通知；系统的省电策略太严时可能被杀掉，请把本应用的电池设为「不限制」。</string>
+    <string name="gy_panel_need_overlay">还没有「显示在其他应用上层」权限，不能放侧边把手。请到权限中心授权。</string>
+    <string name="gy_panel_side">把手位置</string>
+    <string name="gy_panel_side_left">屏幕左边</string>
+    <string name="gy_panel_side_right">屏幕右边</string>
+    <string name="gy_panel_gesture_hint">在桌面上也可以不用把手：设置 → 手势，把「下滑」等手势绑定为「打开控制面板」。在桌面里用手势时不需要悬浮窗权限。</string>
+    <string name="gy_panel_preview">现在试一试</string>
+    <string name="gy_gesture_open_panel">打开控制面板</string>
 </resources>

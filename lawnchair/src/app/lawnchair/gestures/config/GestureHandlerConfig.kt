@@ -8,6 +8,7 @@ import app.lawnchair.gestures.handlers.OpenAppGestureHandler
 import app.lawnchair.gestures.handlers.OpenAppSearchGestureHandler
 import app.lawnchair.gestures.handlers.OpenAppTarget
 import app.lawnchair.gestures.handlers.OpenAssistantHandler
+import app.lawnchair.gestures.handlers.OpenControlPanelHandler
 import app.lawnchair.gestures.handlers.OpenNotificationsHandler
 import app.lawnchair.gestures.handlers.OpenSearchGestureHandler
 import app.lawnchair.gestures.handlers.RecentsGestureHandler
@@ -49,6 +50,10 @@ sealed class GestureHandlerConfig {
     @Serializable
     @SerialName("openNotificationdata")
     data object OpenNotifications : Simple(R.string.gesture_handler_open_notifications, ::OpenNotificationsHandler)
+
+    @Serializable
+    @SerialName("openControlPanel")
+    data object OpenControlPanel : Simple(R.string.gy_gesture_open_panel, ::OpenControlPanelHandler)
 
     @Serializable
     @SerialName("openAppDrawer")

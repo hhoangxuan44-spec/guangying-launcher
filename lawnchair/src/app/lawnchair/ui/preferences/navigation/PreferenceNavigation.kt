@@ -134,6 +134,7 @@ fun PreferenceNavigation(
         }
 
         composable<GuangyingLight> { app.lawnchair.guangying.ui.LightControlPreferences() }
+        composable<GuangyingPanel> { app.lawnchair.guangying.ui.PanelPreferences() }
         composable<GuangyingPermissions> { app.lawnchair.guangying.ui.PermissionCenterPreferences() }
 
         composable<Folders> { FolderPreferences() }

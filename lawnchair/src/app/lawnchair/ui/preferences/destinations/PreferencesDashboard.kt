@@ -68,6 +68,7 @@ import app.lawnchair.ui.preferences.navigation.Folders
 import app.lawnchair.ui.preferences.navigation.General
 import app.lawnchair.ui.preferences.navigation.Gestures
 import app.lawnchair.ui.preferences.navigation.GuangyingLight
+import app.lawnchair.ui.preferences.navigation.GuangyingPanel
 import app.lawnchair.ui.preferences.navigation.HomeScreen
 import app.lawnchair.ui.preferences.navigation.PreferenceRootRoute
 import app.lawnchair.ui.preferences.navigation.Quickstep
@@ -117,6 +118,14 @@ fun PreferencesDashboard(
                 iconResource = R.drawable.ic_guangying_light,
                 onNavigate = { onNavigate(GuangyingLight) },
                 isSelected = currentRoute is GuangyingLight,
+            )
+
+            PreferenceCategory(
+                label = stringResource(R.string.gy_panel_title),
+                description = stringResource(R.string.gy_panel_desc),
+                iconResource = R.drawable.ic_guangying_light,
+                onNavigate = { onNavigate(GuangyingPanel) },
+                isSelected = currentRoute is GuangyingPanel,
             )
 
             PreferenceCategory(
