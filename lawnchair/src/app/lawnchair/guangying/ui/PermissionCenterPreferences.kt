@@ -83,7 +83,7 @@ fun PermissionCenterPreferences(modifier: Modifier = Modifier) {
                                 )
                                 OutlinedButton(onClick = {
                                     context.getSystemService(ClipboardManager::class.java)
-                                        .setPrimaryClip(ClipData.newPlainText("adb", item.adbCommand))
+                                        ?.setPrimaryClip(ClipData.newPlainText("adb", item.adbCommand))
                                     Toast.makeText(context, R.string.gy_perm_copied, Toast.LENGTH_SHORT).show()
                                 }) { Text(text = stringResource(R.string.gy_perm_copy)) }
                             }
